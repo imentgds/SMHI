@@ -1,0 +1,841 @@
+<html>
+<head>
+    <title> SMHI TOUZEUR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family :'Times New Roman', Times, serif;
+            overflow-x: visible;
+            
+        }
+        header{
+            width: 100%;
+            background-image:linear-gradient(rgba(0, 0, 0, 0.114),rgba(0, 0, 0, 0.437)), url("https://www.integrance.fr/sites/default/files/styles/main_image/public/media/images/2022-01/mutuelle-integrance-home-par-telephone-nous-contacter.png?itok=rLsaIBLn");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            min-height: 100px;
+            overflow-x: hidden;
+        }
+        ul{
+            
+            float:right;
+            list-style-type: none;
+            margin-top: 30px;
+            margin-right:60px ;
+        }
+        ul li{
+            display: inline-block;
+            color: #ffffff;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #ffffff;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: 0.5s ease;
+        
+        }
+        
+        ul li a:hover{
+            background-color: #fff;
+            color: #6d6969;
+        }
+        
+        ul li.active a{
+        background-color:#fff;
+            color: #000;
+        
+        }
+        
+        .logo img{
+            float: left;
+            width: 60px;
+            height: 200px;
+            height: auto;
+            border-radius: 15px;
+        }
+        
+        .main{
+        max-width: 1200px;
+        margin: auto;
+        }
+        
+        .main ul li:hover .sub-menu
+        {
+        display: block;
+        position: absolute;
+        background-color: rgb(0,45,117);
+        margin-top: 12px;
+        margin-left: -8px;
+        }
+        
+        .main ul li:hover .sub-menu ul 
+        {
+        display: block;
+        margin:6px;
+        
+        }
+        .main ul li:hover .sub-menu ul li
+        {
+        width: 75px;
+        padding: 5px;
+        border-bottom: 1px#fff;
+        background: transparent;
+        transition: 0.4s ease;
+        text-align: left;
+        border-radius: 0;
+        
+        }
+        
+        .main ul li:hover .sub-menu ul li:last-child 
+        {
+        border-bottom: none;
+        }
+        
+        
+       header .title{
+            
+            position: absolute;
+            text-decoration: overline;
+            text-decoration-color: #897e7e77;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        .title h1{
+            color: #fffcfc;
+            font-size: 55px;
+        }
+   
+        
+        h1 {
+            font-family: 'Poppins', sans-serif, 'arial';
+            font-weight: 600;
+            font-size: 72px;
+            color: rgb(72, 72, 72);
+            text-align: center;
+        }
+        
+        h4 {
+            font-family: 'Roboto', sans-serif, 'arial';
+            font-weight: 400;
+            font-size: 20px;
+            color: #9b9b9b;
+            line-height: 1.5;
+        }
+        
+
+
+
+
+        :root {
+          --primary-color: #010712;
+          --secondary-color: #818386;
+          --bg-color: #FCFDFD;
+          --button-color: #3B3636;
+          --h1-color: #3F444C;
+        }
+        
+        [data-theme="dark"] {
+          --primary-color: #FCFDFD;
+          --secondary-color: #818386;
+          --bg-color: #010712;
+          --button-color: #818386;
+          --h1-color: #FCFDFD;
+        }
+        
+        
+        
+        .contact-container {
+          display: flex;
+          width: 100vw;
+          height: 100vh;
+          background: var(--bg-color);
+        }
+        
+        .left-col {
+          width: 500px;
+          height: 100%;
+          background-image: url("https://www.primobox.com/wp-content/uploads/2022/06/contactez_nous_primobox.png");
+          background-size:contain ;
+          background-repeat: no-repeat;
+          overflow-x: hidden;
+        }
+        
+        .logo {
+          width: 10rem;
+          padding: 1.5rem;
+        }
+        
+        .right-col {
+          background: var(--bg-color);
+          width: 20%;
+          height: 100%;
+          
+          padding: 4rem 3.5rem;
+        }
+        
+        h1, label, button {
+          font-family: 'Jost', sans-serif;
+          font-weight: 400;
+          letter-spacing: 0.1rem;
+          color:#000000;
+        }
+        
+        h1 {
+          color:var(--h1-color);
+          text-transform: uppercase;
+          font-size: 2.5rem;
+          letter-spacing: 0.5rem;
+          font-weight: 300;
+        }
+        
+        p {
+          color: var(--secondary-color);
+          font-size: 0.9rem;
+          letter-spacing: 0.01rem;
+          width: 40vw;
+          margin: 0.25rem 0;
+        }
+        
+        label {
+          color: black;
+          text-transform: uppercase;
+          font-size: 0.625rem;
+        }
+        
+        form {
+          width: 31.25rem;
+          position: absolute;
+          margin-top: 2rem;
+          padding: 1rem 0;
+        }
+        
+        input, textarea, label {
+          width: 40vw;
+          display: block;
+        }
+        
+        p , placeholder, input, textarea {
+          font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        input::placeholder, textarea::placeholder {
+          color:rgb(175, 159, 159) ;
+        }
+        
+        input, textarea {
+          color: var(--primary-color);
+          font-weight: 500;
+          background: var(--bg-color);
+          border: none;
+          border-bottom: 1px solid var(--secondary-color);
+          padding: 0.5rem 0;
+          margin-bottom: 1rem;
+          outline: none;
+        }
+        
+        textarea {
+          resize: none;
+        }
+        
+        button {
+          text-transform: uppercase;
+          font-weight: 300;
+          background: var(--button-color);
+          color: var(--bg-color);
+          width: 10rem;
+          height: 2.25rem;
+          border: none;
+          border-radius: 2px;
+          outline: none;
+          cursor: pointer;
+        }
+        
+        input:hover, textarea:hover, button:hover {
+          opacity: 0.5;
+        }
+        
+        button:active {
+          opacity: 0.8;
+        }
+     
+        
+       
+        
+        .slider {
+          background-color: #ccc;
+          bottom: 0;
+          cursor: pointer;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: .4s;
+        }
+        
+        .slider:before {
+          background-color: #fff;
+          bottom: 0.25rem;
+          content: "";
+          width: 26px;
+          height: 26px;
+          left: 0.25rem;
+          position: absolute;
+          transition: .4s;
+        }
+        
+        input:checked + .slider {
+          background-color: var(--button-color);
+        }
+        
+        input:checked + .slider:before {
+          transform: translateX(26px);
+        }
+        
+        .slider.round {
+          border-radius: 34px;
+        }
+        
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        
+        #error, #success-msg {
+          width: 40vw;
+          margin: 0.125rem 0;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          font-family: 'Jost';
+          color: var(--secondary-color);
+          }
+        
+        
+          #success-msg {
+          transition-delay: 3s;
+          }
+        
+        @media only screen and (max-width: 950px) {
+       
+          h1 {
+            font-size: 1.75rem;
+          }
+          p {
+            font-size: 0.7rem;
+          }
+          input, textarea, button {
+            font-size: 0.65rem;
+          }
+     
+        
+        .slider:before {
+          background-color: #fff;
+          bottom: 0.25rem;
+          content: "";
+          width: 20px;
+          height: 20px;
+          left: 0.25rem;
+          position: absolute;
+          transition: .4s;
+        }
+          input:checked + .slider:before {
+          transform: translateX(16px);
+        }
+        
+        .slider.round {
+          border-radius: 15px;
+        }
+        
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        
+        }
+
+
+
+
+
+
+
+        
+
+
+
+
+
+/*footer*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+footer{
+	
+  overflow-x: hidden;
+background-color: rgba(107, 107, 107, 0.12);
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #5756562a;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #a8a8a898;
+  box-shadow: 0 1px 1px 0 rgba(112, 19, 19, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+.footer-distributed .footer-left{
+  width: 40%;
+}
+.footer-distributed h3{
+  color: rgb(34, 80, 132);
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  #6b83a2fd;
+}
+footer h4{
+    color: #000;
+}
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #2b2b2b;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #3d3f4128;
+  color: #2a2929;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #343333;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  rgb(11, 43, 80);
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+  
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+background-image: url(i15.png);
+border-radius: 10px;
+background-attachment: cover;
+background-position: right;
+background-size: 70px;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #080808;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+	
+  }
+
+}
+
+
+
+
+
+
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) * 1.5);
+}
+
+
+
+.card {
+  
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: right;
+  align-items: center;
+  text-align: right;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(13, 31, 132);
+  cursor: pointer;
+  font-family: cursive;
+  margin-left: 300px;
+
+  box-shadow: #080808;
+  background-image: url("i16.png");
+  background-position: 50%;
+  background-size: cover;
+}
+
+.card:hover {
+  color: rgb(150, 153, 154);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  
+}
+
+
+span a {
+  color: #041a69;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+background-image:linear-gradient(rgba(0, 0, 0, 0.114),rgba(0, 0, 0, 0.437)) ;
+  margin-left: 200px;
+}
+     
+    </style>
+</head>
+
+<body>
+	<header>
+		<div class="main">
+		<div class="logo">
+			<img src="i1.png">
+		</div>
+		
+		 <ul>
+		 <li class="active"><a href="index.html"><i class="fa fa-home"></i>Accueil</a></li>
+		 <li><a href="inv.html">Interventions </a></li>
+
+		 <li><a href="about.html">A propos de nous </a></li>
+         <li><a href="contact.html">Connectez-nous </a></li>
+        </ul> 
+     </div>
+     <div class="title">
+        <h1>Connectez-nous</h1>
+    </div>
+    
+
+     </header>
+     <body>
+    
+      <br><br><br><br><br><br><br><br>
+
+      <div class="contact-container">
+        <div class="left-col">
+          
+        </div>
+        <div class="right-col">
+          <div class="theme-switch-wrapper">
+         
+              
+           
+        </label>
+      </div>
+          
+          <h1>Contactez nous</h1>
+          <p>Nous sommes honores de recevoir votre message</p>
+          
+          <form id="contact-form" method="POST" action="script1.php">
+            <label for="name">Nom et Prenom</label>
+        <input type="text" id="nom" name="nom" placeholder="jhon madrid" required>
+            <label for="e_mail">Address Email </label>
+        <input type="email" id="email" name="email" placeholder="abc@def.gh" required>
+            <label for="message">Vos Message</label>
+        <textarea rows="6" placeholder="Vos Message ..." id="message" name="message" required></textarea>
+           <button type="submit" id="submit" name="submit">Envoyer</button>
+        
+      </form>
+      
+        </div>
+      </div>
+    
+
+
+<div class="card">
+  </div>
+  <h4 style="text-align: center;">Trouver nous sur google map  <a href="https://www.google.com/maps/place/33%C2%B054'59.2%22N+8%C2%B007'19.5%22E/@33.9163903,8.1218566,139m/data=!3m1!1e3!4m4!3m3!8m2!3d33.9164444!4d8.1220833!5m1!1e4?entry=ttu">clicker ici</a> </h4>
+ 
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-distributed">
+    <div class="footer-left">
+       <h3>Contactez-nous  a tout moment<span> SMHI Touzeur</span></h3>
+      <p class="footer-company-name">2024 SMHI TOUZEUR site web. @ Tous droits réservés.</p>
+    </div>
+    <div class="footer-center"> 
+      <div>
+        <i class="fa fa-map-marker"></i><h4>Adresse : </h4>
+        <p><span>Cite el mehrajan tozeur
+          </span> Zone touristique pres de mosaue Al-fatah</p>
+      </div><br><div><i class="fa fa-phone"></i><h4>Appelez-nous</h4> <p>    <span>   </span>        +216 53 540 94</p></div></div>
+<div class="footer-right">
+   <div><i class="fa fa-envelope"></i><h4>Envoyez-nous un message</h4><p><a href="mailto:smhitozeur@yahoo.fr">smhitozeur@yahoo.fr</a></p>
+        </div><div class="footer-icons"> <h4>Suivez-nous sur</h4> <br>
+       <p> <span><a href="https://www.facebook.com/smhiTozeur"><i class="fa fa-facebook"></i></a></span></p>
+      </div>
+    </div>
+
+
+    
+  
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </body>
+
+<script>
+ 
+
+
+
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const contactForm = document.getElementById('contact-form');
+const errorElement = document.getElementById('error');
+const successMsg = document.getElementById('success-msg');
+const submitBtn = document.getElementById('submit');
+  
+const validate = (e) => {
+
+ 
+  if (name.value.length < 3) {
+    errorElement.innerHTML = 'Veuillez ecrire Nom valid ';
+    return false;
+  } 
+  
+  if (!(email.value.includes('.') && (email.value.includes('@')))) {
+    errorElement.innerHTML = 'Veuillez ecrire address email valid ';
+    return false;
+  } 
+
+  if (!emailIsValid(email.value)) {
+    errorElement.innerHTML = 'Veuillez ecrire address email valid  .';
+    return false;
+  }
+
+  if (message.value.length < 10) {
+    errorElement.innerHTML = 'Veuillez ecrire un message plus long.';
+    return false;
+  }
+
+}
+
+const emailIsValid = email => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </html>
