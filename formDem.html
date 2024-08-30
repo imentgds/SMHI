@@ -1,0 +1,201 @@
+<!DOCTYPE html> 
+<head>
+    <title> SMHI TOUZEUR</title>
+    <meta charset="UTF-8">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family :'Times New Roman', Times, serif;
+        overflow-x: visible;
+        
+    }
+    header{
+        width: 100%;
+       background-image:linear-gradient(rgba(0, 0, 0, 0.114),rgba(0, 0, 0, 0.437)), url("i24.jpeg");
+        height: 50vh;
+        background-size:cover ;
+        background-position:center  ;
+        min-height:50px;
+        overflow-x: hidden;
+		margin-bottom: 100px;
+        
+    }
+    ul{
+        
+        float:right;
+        list-style-type: none;
+        margin-top: 30px;
+        margin-right:60px ;
+    }
+    ul li{
+        display: inline-block;
+        color: #ffffff;
+    }
+    ul li a{
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        transition: 0.5s ease;
+        font-size: 20px;
+    
+    }
+    
+    ul li a:hover{
+        background-color: #fff;
+        color: #6d6969;
+    }
+    
+    ul li.active a{
+    background-color:#fff;
+        color: #000;
+        font-size: 20px;
+    
+    }
+    
+    .logo img{
+        float: left;
+        width: 60px;
+        height: 200px;
+        height: auto;
+        border-radius: 15px;
+    }
+    
+
+	
+
+
+
+	form {
+		background-color: #fff;
+		padding: 20px 30px;
+		border-radius: 8px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		max-width: 500px;
+		
+		margin-left: 200px;
+	}
+
+	h2 {
+		text-align: center;
+		color: #333;
+		margin-bottom: 20px;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 8px;
+		font-weight: bold;
+		color: #555;
+	}
+	input[type="email"],
+	input[type="text"],
+	input[type="number"],
+
+	select {
+		
+		padding: 10px;
+		margin-bottom: 20px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+
+	select[multiple] {
+		height: 150px;
+		width: 200px;
+		border-radius: 5px;
+		box-shadow:0 0 10px rgba(0, 0, 0, 0.308);
+		overflow-y: hidden;
+	}
+
+	input[type="submit"] {
+		background-color: #007bff;
+		color: #fff;
+		padding: 10px 15px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: 16px;
+		width: 20%;
+		transition: background-color 0.3s ease;
+	}
+
+	input[type="submit"]:hover {
+		background-color: #0056b3;
+	}
+
+	@media (max-width: 600px) {
+		.container {
+			padding: 15px 20px;
+		}
+
+		input[type="submit"] {
+			font-size: 14px;
+		}
+	}
+	textarea {
+		resize: vertical;
+		height: 100px;
+		width: 300px;
+	}
+
+</style>
+</head>
+	<header>
+		<div class="main">
+		<div class="logo">
+			<img src="i1.png">
+		</div>
+		
+		 <ul>
+		 <li class="active"><a href="index.html"><i class="fa fa-home"></i>Accueil</a></li>
+		 <li><a href="srvs.html">Services </a></li>
+		
+		 <li><a href="about.html">A propos de nous </a></li>
+         <li><a href="contact.html">Connectez-nous </a></li>
+        </ul> 
+     </div>
+   
+     </header>
+	 <form action="frsr.php" method="post">
+		
+        <label for="nom">Nom & Prénom :</label><br>
+        <input type="text" id="nom" name="nom" required>
+
+
+        <label for="cin">CIN :</label><br>
+        <input type="number" id="cin" name="cin" required><br><br>
+
+        <label for="telephone">Numéro de téléphone :</label><br>
+        <input type="number" id="telephone" name="telephone" required><br><br>
+		<label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+        <label for="adresse">Adresse :</label><br>
+        <input type="text" id="adresse" name="adresse" required><br><br>
+
+        <label for="code_postal">Code postal :</label><br>
+        <input type="text" id="code_postal" name="code_postal" required><br><br>
+
+        <label for="services">Liste de services :</label>
+        <select id="services" name="services" multiple required>
+            <option value="plomberie">Plomberie</option>
+            <option value="piscine">Piscine</option>
+            <option value="froids">Froids</option>
+            <option value="electricite">Électricité</option>
+            <option value="chauffage">Chauffage</option>
+            <option value="peinture">Peinture</option>
+        </select><br><br>
+		<label for="description">Description :</label>
+		<textarea id="description" name="description" placeholder="Décrivez vos besoins ou services supplémentaires..." required></textarea>
+		<br><br>
+        <input type="submit" value="Envoyer">
+    
+		</form>
+	</div>
+
+	</body>
+</html>
