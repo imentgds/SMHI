@@ -1,0 +1,669 @@
+<html>
+<head>
+    <title> SMHI TOUZEUR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family :'Times New Roman', Times, serif;
+            overflow-x: visible;
+            
+        }
+        header{
+            width: 100%;
+            background-image:linear-gradient(rgba(0, 0, 0, 0.114),rgba(0, 0, 0, 0.437)), url("i17.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-position: center ;
+            min-height: 100px;
+            overflow-x: hidden;
+        }
+        ul{
+            
+            float:right;
+            list-style-type: none;
+            margin-top: 30px;
+            margin-right:60px ;
+        }
+        ul li{
+            display: inline-block;
+            color: #ffffff;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #ffffff;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: 0.5s ease;
+        
+        }
+        
+        ul li a:hover{
+            background-color: #fff;
+            color: #6d6969;
+        }
+        
+        ul li.active a{
+        background-color:#fff;
+            color: #000;
+        
+        }
+        
+        .logo img{
+            float: left;
+            width: 60px;
+            height: 200px;
+            height: auto;
+            border-radius: 15px;
+        }
+        
+        .main{
+        max-width: 1200px;
+        margin: auto;
+        }
+        
+        .main ul li:hover .sub-menu
+        {
+        display: block;
+        position: absolute;
+        background-color: rgb(0,45,117);
+        margin-top: 12px;
+        margin-left: -8px;
+        }
+        
+        .main ul li:hover .sub-menu ul 
+        {
+        display: block;
+        margin:6px;
+        
+        }
+        .main ul li:hover .sub-menu ul li
+        {
+        width: 75px;
+        padding: 5px;
+        border-bottom: 1px#fff;
+        background: transparent;
+        transition: 0.4s ease;
+        text-align: left;
+        border-radius: 0;
+        
+        }
+        
+        .main ul li:hover .sub-menu ul li:last-child 
+        {
+        border-bottom: none;
+        }
+        
+        
+       header .title{
+            
+            position: absolute;
+            text-decoration: overline;
+            text-decoration-color: #897e7e77;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        .title h1{
+            color: #fffcfc;
+            font-size: 55px;
+        }
+   
+        
+        h1 {
+            font-family: 'Poppins', sans-serif, 'arial';
+            font-weight: 600;
+            font-size: 72px;
+            color: rgb(72, 72, 72);
+            text-align: center;
+        }
+        
+        h4 {
+            font-family: 'Roboto', sans-serif, 'arial';
+            font-weight: 400;
+            font-size: 20px;
+            color: #9b9b9b;
+            line-height: 1.5;
+        }
+        
+/*footer*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+footer{
+	
+  overflow-x: hidden;
+background-color: rgba(107, 107, 107, 0.12);
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #5756562a;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #a8a8a898;
+  box-shadow: 0 1px 1px 0 rgba(112, 19, 19, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+.footer-distributed .footer-left{
+  width: 40%;
+}
+.footer-distributed h3{
+  color: rgb(34, 80, 132);
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  #6b83a2fd;
+}
+footer h4{
+    color: #000;
+}
+
+.footer-distributed .footer-links{
+  color:  #2b2b2b;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #3d3f4128;
+  color: #2a2929;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #343333;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  rgb(11, 43, 80);
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+  
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+background-image: url(i15.png);
+border-radius: 10px;
+background-attachment: cover;
+background-position: right;
+background-size: 70px;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #080808;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+	
+  }
+
+}
+
+
+
+
+
+
+
+body {
+  
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    margin: 0;
+    
+  }
+  .container {
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  }
+  
+  .text-center {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  
+ 
+
+
+ figure.snip {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 220px;
+    max-width: 310px;
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+ 
+  }
+  
+  figure.snip * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    
+
+  }
+  
+  figure.snip img {
+    max-width: 100%;
+    margin: 40px auto;
+    display: block;
+    position: relative;
+    border: 3px solid #666666;
+    padding: 15px 15px 85px 15px;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  
+  figure.snip figcaption {
+    height: 100px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    display: block;
+    margin-top: 10px;
+
+  }
+  
+  figure.snip h3 {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1.7em;
+    width: 100%;
+    padding: 5px 12px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  
+  figure.snip h3 span {
+    font-weight: 800;
+  }
+  
+  figure.snip h4 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    opacity: 0.6;
+    font-size: 1.1em;
+  }
+  /*blue*/
+  
+  figure.snip.blue img {
+    border-color: #2472a4;
+  }
+  figure.snip.blue h3,
+  figure.snip.blue h4 {
+    color: #2472a4;
+  }
+  /*red*/
+  figure.snip.red img {
+    border-color: #bc3627;
+  }
+  figure.snip.red h3,
+  figure.snip.red h4 {
+    color: #bc3627;
+  }
+  
+  
+  
+  figure.snip.navy img {
+    border-color: #2b3c4e;
+  }
+  
+  figure.snip.navy h3,
+  figure.snip.navy h4 {
+    color: #2b3c4e;
+  }
+  
+  
+  
+    </style>
+</head>
+
+
+	<header>
+		<div class="main">
+		<div class="logo">
+			<img src="i1.png">
+		</div>
+		
+		 <ul>
+		 <li class="active"><a href="index.html"><i class="fa fa-home"></i>Accueil</a></li>
+		 <li><a href="srvs.html">Services </a></li>
+		
+		 <li><a href="about.html">A propos de nous </a></li>
+         <li><a href="contact.html">Connectez-nous </a></li>
+        </ul> 
+     </div>
+     <div class="title">
+        <h1>SERVICES </h1>
+     </div>
+
+     </header>
+     <body>
+      
+
+      <div style="margin-top:120px;">
+
+
+      <figure class="snip red" >
+        <img src="ii18.jpg" alt="pr-sample1" />
+        <figcaption>
+          <h3>Plomberie
+            <span> </span></h3>
+          <h4> 
+            Demander 
+          </h4>
+        </figcaption>
+      </figure>
+    
+   
+
+
+      <figure class="snip blue hover"><img src="ii19.jpg" alt="pr-sample3" />
+        <figcaption>
+          <h3>Electricite <span></span></h3>
+          <h4> 
+            Demander 
+          </h4>
+        </figcaption>
+      </figure>
+
+ 
+    </div>
+    <div style="margin-top:120px;margin-left:100px">
+
+
+      <figure class="snip"><img src="ii20.jpg" alt="pr-sample9" />
+        <figcaption>
+          <h3>piscine <span></span></h3>
+          <h4>
+            Demander 
+          </h4>
+        </figcaption>
+      </figure>
+
+ 
+
+      <figure class="snip" >
+        <img src="i21.jpg" alt="pr-sample9" />
+        <figcaption><span>Maintenance de </span>
+          <h3>Chauffage </h3>
+          <h4>
+            Demander 
+            
+          </h4>
+        </figcaption>
+      </figure>
+
+
+</div><div style="margin-top:120px;margin-left:100px;">
+
+
+
+      <figure class="snip blue hover"><img src="22.jpg" alt="pr-sample9" />
+        <figcaption><span>Maintenance de </span>
+          <h3>Froids </h3>
+          <h4>
+            Demander 
+          </h4>
+        </figcaption>
+      </figure>
+
+
+      
+      <figure class="snip red"><img src="i23.jpg" alt="pr-sample9" />
+        <figcaption>
+          <h3>Peinture </h3><span>Professionelle  </span>
+          <h4>
+            Demander 
+          </h4>
+        </figcaption>
+      </figure>
+
+
+ 
+
+
+
+</div>
+
+
+<button>
+  <style>
+button {
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-bottom: 200px;
+}
+
+button span {
+  position: relative;
+  display: flex;
+  font-family:Georgia, 'Times New Roman', Times, serif; 
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #0a1135;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+
+}
+
+button span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #757e90;
+}
+
+button span:not(hover) {
+  transition: all 1s;
+}
+
+  </style>
+  
+  <a  href="formDem.html"> <span> DEMANDER UN SERVICE  </span></a>
+</button>
+
+
+<button>
+<span> CONSULTER COMMANDE  </span>
+<a href="consult.html"></a>
+</button>
+
+
+
+
+
+
+
+
+<footer class="footer-distributed">
+    <div class="footer-left">
+       <h3>Contactez-nous  a tout moment<span> SMHI Touzeur</span></h3>
+      <p class="footer-company-name">2024 SMHI TOUZEUR site web. @ Tous droits réservés.</p>
+    </div>
+    <div class="footer-center"> 
+      <div>
+        <i class="fa fa-map-marker"></i><h4>Adresse : </h4>
+        <p><span>Cite el mehrajan tozeur
+          </span> Zone touristique pres de mosaue Al-fatah</p>
+      </div><br><div><i class="fa fa-phone"></i><h4>Appelez-nous</h4> <p>    <span>   </span>        +216 53 540 94</p></div></div>
+<div class="footer-right">
+   <div><i class="fa fa-envelope"></i><h4>Envoyez-nous un message</h4><p><a href="mailto:smhitozeur@yahoo.fr">smhitozeur@yahoo.fr</a></p>
+        </div><div class="footer-icons"> <h4>Suivez-nous sur</h4> <br>
+       <p> <span><a href="https://www.facebook.com/smhiTozeur"><i class="fa fa-facebook"></i></a></span></p>
+      </div>
+    </div>
+
+
+    
+  
+  </footer>
+
+
+</body>
+
+
+
+
+
+</html>
